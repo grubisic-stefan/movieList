@@ -1,0 +1,720 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #252525;
+   
+}
+
+header {
+    padding: 1em 0;
+    background-image: url("images/4.jpg");
+    text-align: center;
+    border-bottom: solid 3px #131212;
+    /* min-width: 600px; */
+   
+    margin-bottom: 1em;
+}
+
+hr {
+    width: 100%;
+}
+
+.container {
+    max-width: 1500px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-filter {
+    flex-direction: column;
+    
+    
+
+}
+
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes svacega {
+    
+        0%   {opacity: 0; height: 0;}
+       
+        100% {opacity: 100%;height: 210px;}
+      
+}
+@keyframes svacega-negativ {
+    0%   {opacity: 100%;height: 210px;}
+       
+        100% {opacity: 0;height: 0;}
+}
+
+.animacija{
+    animation: svacega 0.8s ;
+}
+.animacija-negativ{
+    animation: svacega-negativ 0.5s ;
+
+}
+
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: #FF0000;
+}
+
+.site-title h1 {
+    display: inline-block;
+}
+
+p {
+    color: #707070;
+    font-size: 1.5rem;
+}
+
+#nav p {
+    font-size: 1.2;
+    font-weight: 800;
+}
+
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #707070;
+    font-weight: 700;
+    padding: .25em .5em;
+    border: 3px solid #707070;
+    background-color: #141414;
+}
+
+#nav a:hover,
+#nav a:focus {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+#nav a:active {
+    color: #f13636;
+    border-color: #f13636;
+}
+
+/* .current-page {
+    border: solid 3px #ff0000;
+    color: #ff0000;
+} */
+#nav input {
+    margin: 0;
+    color: #707070;
+    font-size: 1.25rem;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: transparent;
+    outline: none;
+}
+
+#nav input:hover,
+#nav input:focus {
+    color: #ff0000;
+
+
+}
+
+#nav button {
+    background-color: transparent;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    color: #707070;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+#nav button:hover {
+    color: #ff0000;
+
+}
+
+#Menu img {
+    width: 30px;
+}
+
+#NavMenu {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#NavMenu p {
+
+    margin: 0;
+}
+
+
+label {
+    color: white;
+    font-size: 1.5em;
+}
+
+.FilteriPonudjeno {
+    display: flex;
+    background-color: rgba(0, 0, 0, 70%);
+    padding: 0.5em;
+    border: 3px solid black;
+}
+
+
+#Tip {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#Dodatno {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+}
+
+#Dodatno fieldset {
+    width: 90%;
+}
+
+fieldset {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    border: 0;
+    align-items: center;
+
+}
+
+#Zanr {
+    width: 60%;
+}
+
+
+#Zanr>div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+}
+
+#Zanr>div>div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+
+
+}
+
+#Zanr fieldset {
+    width: 100%;
+
+}
+
+
+
+.subtitle {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #dedede;
+}
+
+
+
+
+select {
+    
+    background-color: #141414;
+    color: #707070;
+    font-size: large;
+    border: 3px solid red;
+    width: 100%;
+
+
+
+}
+
+
+
+
+
+
+
+input[type=checkbox] {
+
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    border: #707070 solid 3px;
+    padding: 5px;
+    background-clip: content-box;
+
+    background-color: #707070;
+    transition: transform 1s;
+    cursor: pointer;
+
+
+
+}
+
+input[type=checkbox]:checked {
+    background-color: #FF0000;
+    padding: 4px;
+    border: #ff0000 4px solid;
+    transform: scale(120%);
+
+}
+
+label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+
+label:hover {
+    color: #707070;
+}
+
+#BrisiFiltere,#PrimeniFiltere{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    margin-top:1em;
+    background-color: #252525;
+    color: #ff0000;
+    width: 90%;
+    font-size: 1em;
+    cursor: pointer;
+    border: black 2px solid;
+}
+#BrisiFiltere:hover,#PrimeniFiltere:hover{
+    background-color: #707070;
+}
+
+
+/**********************************************************/
+#Count{
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+}
+#Count p{
+    margin: 0;
+}
+
+
+.container-film {
+    justify-content: space-evenly;
+   
+
+    flex-wrap: wrap;
+}
+
+
+.Film {
+
+    min-width: 180px;
+    /* height: 40vh; */
+    width: 19%;
+    border: 3px solid #FF0000;
+    margin-bottom: 2em;
+    position: relative;
+    max-height: 40vh;
+    transition: 0.2s;
+    margin-left: 3px;
+
+
+
+}
+
+.Slika {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+
+}
+
+.Film:hover .Naziv {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*transform: scale(110%);*/
+}
+
+
+.Film:hover {
+    transform: scale(110%);
+    cursor: pointer;
+
+
+
+}
+
+
+.Film img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    
+
+
+
+}
+
+.Naziv {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.Naziv p {
+    margin: 0;
+    font-weight: 600;
+    color: #dedede;
+}
+
+/**********Informacije o filmu*********/
+
+#Container-info {
+    width: 100%;
+    height: 100vh;
+    border: 3px solid white;
+   
+    background-repeat: repeat;
+    position: fixed;
+    top: 0;
+
+
+}
+
+#Container-info>div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.5);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+#Informacije {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+}
+
+#Plot {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    border: 2px solid black;
+
+
+    padding: 0.5em;
+
+}
+
+#Plot p {
+    color: white;
+
+    margin: 0;
+
+}
+
+#Info {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    border: 2px solid black;
+
+
+}
+
+.Info-table {
+    border-collapse: separate;
+    border-spacing: 1.5em 0.50em;
+    width: 100%;
+
+
+}
+
+
+
+.Info-table td {
+    color: white;
+    font-size: 1.5em;
+}
+
+.Info-table tr td:first-child {
+    color: red;
+    font-weight: 700;
+}
+
+.Info-table caption {
+    color: white;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+
+#Slika-Big {
+    width: 29%;
+
+
+}
+
+#Slika-Big img {
+    width: 100%;
+    max-height: 500px;
+    border: #FF0000 5px solid;
+
+}
+
+#Slika-Big>div {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5em;
+    border: 2px solid black;
+
+}
+
+#Slika-Big p {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+#Izadji {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#Izadji:hover p {
+    color: rgb(114, 0, 0);
+    font-weight: 800;
+}
+
+#Izadji:hover {
+    background-color: rgba(95, 95, 95, 0.8);
+}
+
+
+
+
+
+
+.Hidden {
+
+    display: none !important;
+}
+
+
+@media (max-width:800px) {
+
+  .animacija{
+    animation: none !important;
+  }
+  .animacija-negativ {
+      display: none !important;
+    animation: none !important;
+  }
+  
+
+
+    .container {
+        flex-direction: column;
+    }
+
+    .FilteriPonudjeno {
+        flex-direction: column;
+        /* justify-content: center;*/
+        align-items: center;
+    }
+
+    #Tip {
+        width: 100%;
+    }
+
+    #Tip div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #Tip input:last-of-type {
+        margin-left: 2em;
+    }
+
+    #Zanr {
+        width: 100%;
+    }
+
+    #Zanr div {
+        justify-content: space-between;
+
+    }
+
+    #Dodatno {
+        width: 50%;
+
+        align-items: center;
+    }
+
+    #NavMenu {
+        margin-top: 1em;
+        max-width: 300px;
+        min-width: 300px;
+
+    }
+
+    #NavPretraga {
+        margin-top: 1em;
+    }
+
+
+
+    main {
+        width: 100%;
+
+        padding: 0;
+    }
+
+    .container-film {
+        flex-direction: row;
+    }
+
+    #Sve {
+        flex-direction: column;
+    }
+
+    #Informacije {
+        width: 100%;
+    }
+    #Plot p{
+        font-size: 1.3em ;
+    }
+    #Info caption{
+        display: none;
+    }
+
+    #Slika-Big {
+        width: 100%;
+    }
+
+    #Slika-Big img {
+        display: none;
+    }
+
+    #Slika-Big>div {
+        width: 90%;
+        margin: 0.2em auto;
+
+    }
+
+    #Slika-Big div:first-of-type {
+        padding: 0;
+    }
+
+    td {
+        font-size: 1.2em !important;
+
+    }
+
+
+}
+
+
+@media (max-width:500px) {
+    #Zanr>div {
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #Tip>div {
+        flex-direction: column;
+        width: 82%;
+        margin: 0 auto;
+
+    }
+
+    #Tip fieldset {
+        width: 100%;
+
+    }
+    #Plot p{
+        font-size: 1.2em ;
+    }
+    #Slika-Big div:first-of-type p {
+       font-size: 1.2em !important;
+
+    }
+    #Izadji p{
+        font-size: 0.6em !important;
+    }
+    #Izadji{
+        padding: 5px !important;
+    }
+    td{
+        font-size: 1em !important;
+    }
+}
+
+@media (max-width:450px) {
+    .Film {
+        width: 80%;
+        margin: 1em auto;
+    }
+}

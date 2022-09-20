@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregled Filmova</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <script src="podaci.js"></script>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="container ">
+
+            <div class="site-title">
+                <h1>LightsOut</h1>
+                <p class="subtitle">najbolji filmovi i serije </p>
+            </div>
+
+            <div id="nav">
+                <div id="NavPretraga">
+                    <input id="Unos" type="text" placeholder="Search..">
+                    <button id="Pretraga" type="submit"><i class="fa fa-search"></i></button>
+
+                </div>
+
+                <div id="NavMenu">
+                    <p>Izaberite filtere</p>
+                    <button id="Menu"><img src="icons8-menu-material-outlined/icons8-menu-24.png" alt=""></button>
+
+                </div>
+
+
+
+                <!-- <ul>
+                    <li><a class="current-page" href="#">Početna</a></li>
+                    <li><a href="filmovi.html">Filmovi</a></li>
+                    <li><a href="serije.html">Serije</a></li>
+                    <li><a href="info.html">O nama</a></li>
+
+                </ul>-->
+
+
+
+            </div>
+        </div>
+
+
+        <div class="container container-filter Hidden">
+            <hr>
+            <div class="FilteriPonudjeno">
+                <div id="Tip">
+                    <p>Izaberite tip</p>
+                    <div>
+                        <fieldset>
+                            <input id="Filmovi" type="checkbox" value="Film">
+                            <label for="Filmovi">Filmovi</label>
+
+                        </fieldset>
+
+                        <fieldset>
+                            <input id="Serije" type="checkbox" disabled>
+                            <label for="Serije">Serije</label>
+
+                        </fieldset>
+
+                    </div>
+
+
+
+                </div>
+                <div id="Zanr">
+                    <p>Izaberite žanr</p>
+                    <div>
+                        <div>
+                            <fieldset>
+                                <input id="Avantura" type="checkbox" value="Adventure">
+                                <label for="Avantura">Avantura</label>
+
+                            </fieldset>
+
+                            <fieldset>
+                                <input id="Akcija" type="checkbox" value="Action">
+                                <label for="Akcija">Akcija</label>
+
+                            </fieldset>
+                            <fieldset>
+                                <input id="Drama" type="checkbox" value="Drama">
+                                <label for="Drama">Drama</label>
+
+                            </fieldset>
+
+                        </div>
+
+                        <div>
+                            <fieldset>
+                                <input id="Sci-Fi" type="checkbox" value="Sci-Fi">
+                                <label for="Sci-Fi">Sci-Fi</label>
+
+                            </fieldset>
+                            <fieldset>
+                                <input id="Fantazija" type="checkbox" value="Fantasy">
+                                <label for="Fantazija">Fantazija</label>
+
+                            </fieldset>
+                            <fieldset>
+                                <input id="Ljubavni" type="checkbox" value="Romance">
+                                <label for="Ljubavni">Ljubavni</label>
+
+                            </fieldset>
+
+                        </div>
+
+                        <div>
+                            <fieldset>
+                                <input id="Komedija" type="checkbox" value="Comedy">
+                                <label for="Komedija">Komedija</label>
+
+                            </fieldset>
+                            <fieldset>
+                                <input id="Triler" type="checkbox" value="Thriller">
+                                <label for="Triler">Triler</label>
+
+                            </fieldset>
+                            <fieldset>
+                                <input id="Horor" type="checkbox" value="Horror">
+                                <label for="Horor">Horor</label>
+
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div id="Dodatno">
+
+
+                    <p> Ocena</p>
+                    <fieldset>
+                        <select name="Ocena" id="Ocena">
+                            <option value="Izaberite" selected disabled>Izaberite..</option>
+                            <option value="manje">ispod 5</option>
+                            <option value="pet">5</option>
+                            <option value="sest">6</option>
+                            <option value="sedam">7</option>
+                            <option value="osam">8</option>
+                            <option value="devet">9</option>
+                            
+                        </select>
+
+
+                    </fieldset>
+                    <button id="BrisiFiltere">Obrisi filtere</button>
+                    <button id="PrimeniFiltere">Primeni filtere</button>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </header>
+
+    <main>
+        <div id="Count" class="Hidden">
+            <p>Pronadjeno: <span style="color:#ff0000"></span></p>
+
+        </div>
+        <div id="ListaFilmova"class="container container-film ">
+
+           <!-- <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+                    <p class="Target">
+                        Doktor Strange
+                    </p>
+                    <p>2022</p>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>
+            <div class="Film">
+                <div class="Slika">
+                    <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                        alt="">
+
+                </div>
+                <div class="Naziv">
+
+                </div>
+            </div>-->
+
+
+        </div>
+    </main>
+
+
+    <div  id="Container-info" class="Hidden">
+       <!-- <div id="Sve">style=" background-image: url('https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg');"
+            <div id="Informacije">
+                <div id="Plot">
+                    <p>
+                        Četiri godine nakon što je obukao legendarni crveni kostim,
+                        <em>Tom Holand</em> pojavljuje se po treći put na velikom platnu
+                        kao čovek-pauk u filmu Spajdermen: Put bez povratka.
+                        <br />
+                        Po prvi put u istoriji kinematografije, Spajdermen, naš prijatelj iz
+                        komšiluka je bez maske i bez mogućnosti da odvoji svoj svakodnevni život od visokih uloga da
+                        bude superheroj.
+                        Kada se obrati za pomoć Doktoru Strejndžu, ulozi postaju još opasniji,
+                        primoravajući ga da otkrije šta zaista znači biti Spajdermen.
+                    </p>
+
+                </div>
+                <div id="Info">
+                    <table class="Info-table">
+                        <caption>Info:</caption>
+                        <tr>
+                            <td class="table-coulumn">Režiser:</td>
+                            <td>Jon Watts</td>
+                        </tr>
+                        <tr>
+                            <td>Glumci:</td>
+                            <td>
+                                Tom Holland, Zendaya, Benedict Cumberbatch, Jon Favreau, Jacob Batalon
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Država:</td>
+                            <td>SAD</td>
+                        </tr>
+                        <tr>
+                            <td>Žanr:</td>
+                            <td>Akcija, Avantura</td>
+                        </tr>
+                        <tr>
+                            <td>Trajanje:</td>
+                            <td>148min</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+            <div id="Slika-Big">
+                <img src="https://media.elcinema.com/uploads/_315x420_800a239ebcbf1e87e945a975d78e0feb2867f249b84fbe0a5685475445399634.jpg"
+                    alt="">
+                <div>
+                    <p>Doctor Strange: Multiverse of Maddness</p>
+                    <p>2022</p>
+
+                </div>
+                <div id="Izadji">
+                    <p id="IzadjiP">
+                        IZAĐI
+                    </p>
+
+                </div>
+            </div>
+
+
+        </div>-->
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
